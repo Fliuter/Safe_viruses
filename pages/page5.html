@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=`, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <title>Загрузочные вирусы</title>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar__menu topbar__menu_list">
+      <button class="topbar__menu_svg">
+        <img src="../img/menu.svg" alt="fail" />
+      </button>
+      <button class="topbar__menu_listEl topbar__button_img1" id="1"><a href="../index.html">
+          <h3 class="topbar__menu_text"><b>Вирусы</b></h3>
+        </a></button>
+      <button class="topbar__menu_listEl topbar__button_img2" id="2"><a href="https://dodopizza.ru/abakan/kirova101" ;
+          target="_blank">
+          <h3 class="topbar__menu_text"><b>Пицца</b></h3>
+        </a></button>
+      <button class="topbar__menu_listEl topbar__button_img3" id="3"><a href="#">
+          <h3 class="topbar__menu_text"><b>Деньги</b></h3>
+        </a></button>
+    </div>
+    <div class="topbar__icon">
+      <img src="../img/icon-min.svg" alt="fail" />
+    </div>
+  </header>
+  </header>
+  <main class="wrapper">
+    <div class="wrapper__content">
+      <p class="wrapper__font">Загру́зочный ви́рус — компьютерный вирус, записывающийся в первый сектор гибкого или
+        жёсткого диска и выполняющийся при загрузке компьютера с идущих после главной загрузочной записи (MBR), но до
+        первого загрузочного сектора раздела. Перехватив обращения к дискам, вирус либо продолжает загрузку операционной
+        системы, либо нет (MBR-Locker). Размножается вирус записью в загрузочную область других накопителей компьютера.
+        Простейшие загрузочные вирусы, находясь в памяти заражённого компьютера, обнаруживают в компьютере незаражённый
+        диск и производят следующие действия:</p>
+      <ol class="wrapper__sublist">
+        <li class="wrapper__sublist_element wrapper__font"><b><i>Выделяют некоторую область диска и делают её
+              недоступной для операционной системы.</i></b></li>
+        <li class="wrapper__sublist_element wrapper__font"><b><i>Замещают программу начальной загрузки в загрузочном
+              секторе диска, копируя корректную программу загрузки, а также свой код, в выделенную область
+              диска;</i></b></li>
+        <li class="wrapper__sublist_element wrapper__font"><b><i>Организуют передачу управления так, чтобы вначале
+              выполнялся код вируса и лишь затем — программа начальной загрузки.</i></b></li>
+      </ol>
+      <h2 class="wrapper__headlines">Опасность</h2>
+      <p class="wrapper__font">Загрузочные вирусы очень редко «уживаются» вместе на одном диске по причине того, что
+        используют (возможно) одни и те же дисковые сектора для размещения своего кода/данных. В результате код/данные
+        первого вируса оказываются испорченными при заражении вторым вирусом, и система либо отказывает в обслуживании,
+        либо зацикливается при загрузке операционной системы.</p>
+      <h2 class="wrapper__headlines">История</h2>
+      <p class="wrapper__font">Загрузочные вирусы были широко распространены в эпоху MS-DOS. Вирус Brain — первый в
+        истории компьютерный вирус, вызвавший широкую эпидемию, относился именно к классу загрузочных. Во второй
+        половине 1990-х годов в связи с повсеместным использованием 32-разрядных версий Windows загрузочные вирусы
+        временно потеряли свою актуальность. Однако в 2007 г. появилась новая разновидность вредоносных программ —
+        руткиты, использующие те же технологии заражения дисков, что и загрузочные вирусы.</p>
+    </div>
+  </main>
+
+  <script src="../scripts/menu.js"></script>
+</body>
+
+</html>

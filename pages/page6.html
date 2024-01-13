@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=`, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <title>Полиморфные вирусы</title>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar__menu topbar__menu_list">
+      <button class="topbar__menu_svg">
+        <img src="../img/menu.svg" alt="fail" />
+      </button>
+      <button class="topbar__menu_listEl topbar__button_img1" id="1"><a href="../index.html">
+          <h3 class="topbar__menu_text"><b>Вирусы</b></h3>
+        </a></button>
+      <button class="topbar__menu_listEl topbar__button_img2" id="2"><a href="https://dodopizza.ru/abakan/kirova101" ;
+          target="_blank">
+          <h3 class="topbar__menu_text"><b>Пицца</b></h3>
+        </a></button>
+      <button class="topbar__menu_listEl topbar__button_img3" id="3"><a href="#">
+          <h3 class="topbar__menu_text"><b>Деньги</b></h3>
+        </a></button>
+    </div>
+    <div class="topbar__icon">
+      <img src="../img/icon-min.svg" alt="fail" />
+    </div>
+  </header>
+  </header>
+  <main class="wrapper">
+    <div class="wrapper__content">
+      <h2 class="wrapper__headlines">Работа</h2>
+      <p class="wrapper__font">Полиморфизм заключается в формировании программного кода вредоносной программы «на лету»
+        — уже во время исполнения, при этом сама процедура, формирующая код, также не должна быть постоянной и
+        видоизменяется при каждом новом заражении. Зачастую, изменение кода достигается путём добавления операторов, не
+        изменяющих алгоритм работы программного кода (например, оператор NOP). Постоянное видоизменение программного
+        кода вредоносной программы не позволяет создать универсальную сигнатуру для данного образца вредоносной
+        программы. На сегодняшний день для противодействия данному методу в антивирусном программном обеспечении
+        применяются такие технологии, как эвристический анализ и эмуляция.</p>
+      <h2 class="wrapper__headlines">История</h2>
+      <p class="wrapper__font">Первый известный полиморфный вирус был написан Марком Вашбёрном (Mark Washburn). Вирус,
+        который назывался 1260, был создан в 1990 году. Более известный полиморфный вирус был внедрён в 1992 году
+        болгарским взломщиком Dark Avenger (псевдоним), создавшим MtE (Mutation Engine).На сегодняшний день известно
+        большое количество вредоносных программ, которые используют именно полиморфизм в качестве средства для
+        затруднения анализа и создания сигнатуры.</p>
+      <h2 class="wrapper__headlines">Пример кода на ассемблере</h2>
+      <div>
+        <pre class="wrapper__code_window">
+          <code >
+            mov cx, code_length
+            mov si, offset begin_code
+            mov al, xor_key
+        
+        _loop:
+            xor [si+cx], al ;расшифровываем байт
+            loop _loop      ;берем следующий байт
+            jmp si
+        
+            ;...
+            ;...
+            
+        begin_code:
+            ;тут находится зашифрованная часть тела вируса
+            ;именно она ответственна за заражение новых файлов
+            ;и формирование новой процедуры расшифровки
+            ;при этом эта же часть тела вируса в новом файле должна быть заново
+            ;зашифрована, но уже с другим ключом 
+          </code>
+        </pre>
+      </div>
+
+
+      <!--<ul class="wrapper__sublist">
+              <li class="wrapper__sublist_element wrapper__font"><b><i></i></b></li>
+              <li class="wrapper__sublist_element wrapper__font"><b><i></i></b></li>
+             </ul>-->
+      <h2 class="wrapper__headlines">Способы защиты</h2>
+      <p class="wrapper__font">Для эффективной защиты от полиморфных вредоносных программ необходимо применение
+        проактивных методов антивирусной защиты, таких как эвристический анализ и эмуляция. Однако эвристический анализ
+        и эмуляция не могут гарантировать 100%-го обнаружения полиморфных вредоносных программ, в связи с чем
+        рекомендуется использование HIPS.</p>
+    </div>
+  </main>
+
+  <script src="../scripts/menu.js"></script>
+</body>
+
+</html>
